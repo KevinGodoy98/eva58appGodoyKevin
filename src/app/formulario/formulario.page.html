@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Crear....</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="stacked">Calle Principal:</ion-label>
+    <ion-input [(ngModel)]="local.calleprincipal"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Calle Secundaria:</ion-label>
+   <!-- <ion-input [(ngModel)]="contacto.apellido">{{contacto.apellido}}</ion-input>-->
+   <ion-input [(ngModel)]="local.callesecundaria"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="stacked">Numero Local:</ion-label>
+    <ion-input [(ngModel)]="local.numerolocal"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Telefono:</ion-label>
+    <ion-input [(ngModel)]="local.telefono"></ion-input>
+  </ion-item>
+
+<br>
+<br>
+<br> 
+
+<ion-button color="success" expand="full" (click)="add()">Agregar</ion-button>
+</ion-content>

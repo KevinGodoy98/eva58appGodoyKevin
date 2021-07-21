@@ -1,0 +1,40 @@
+
+<ion-app>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Listado....</ion-title>
+  </ion-toolbar>
+  <ion-searchbar placeholder="Buscar local" 
+  
+  showcancelbutton=""
+  (ionInput)="filterList($event)"></ion-searchbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-divider>Tus Locales:</ion-item-divider>
+    
+    <div *ngFor="let local of locales | async">
+        <ion-item >
+            <ion-input  [(ngModel)]="local.calleprincipal"></ion-input>
+        </ion-item>
+        <ion-item >
+            <ion-input  [(ngModel)]="local.callesecundaria"></ion-input>
+        </ion-item>
+      <ion-item>
+            <ion-input  [(ngModel)]="local.numerolocal"></ion-input>
+      </ion-item>
+    <ion-item>
+            <ion-input  [(ngModel)]="local.telefono"></ion-input>
+    </ion-item> 
+    <ion-item-divider></ion-item-divider>
+        
+    </div>
+</ion-list>
+</ion-content>
+
+</ion-app>
